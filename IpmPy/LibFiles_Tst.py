@@ -28,12 +28,13 @@ FN2 = '1_Inp352x352.f32'
 PathR2 = PathT + FN2
 
 print("Test LibFiles:")
-
+'''
 ImgF = LibF.Read_File(PathR)
 ImgF = ImgF.reshape(Rows,Cols)
 print(f" ImgF.ndim = {ImgF.ndim},    ImgF.shape={ImgF.shape},  ImgF.size={ImgF.size},  ImgF.dtype={ImgF.dtype},  ImgF[0, 0] = { ImgF[0, 0] } \n\n")
 print(f"ImgF = { ImgF }\n")
 #LibD.ImgStat(ImgF)
+'''
 
 Data = np.arange(10)
 print(f"Data = {Data}")
@@ -43,6 +44,9 @@ FN3 = 'File.bin'
 PathTmp = PathM + FN3
 LibF.Write_File(PathTmp, Data)
 
+DataR = LibF.Read_File(PathTmp)
+print(f"DataR = {DataR}")
+print(f"DataR[1] = {DataR[1]}")
 
 
 

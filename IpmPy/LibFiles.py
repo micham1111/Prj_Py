@@ -3,6 +3,7 @@
 # LibFiles.py Updated: 20_06_12
 
 import numpy
+import io
 
 # Read raw data from a binary file
 def Read_File(path, data_type='<f4'):
@@ -20,14 +21,31 @@ def Read_File2(path):
         dat = numpy.fromfile(f, '<f4') # little-endian float32
     return dat
 
-# File.bin => File.bin.npy
-def Write_File(path, data):
+# File => File.npy
+def Write_FileNpy(path, data):
     print(f" Write_File: { path } ")
     numpy.save(path, data)
 
+# *F* don't work
+def Write_File(path, data):
+    print(f" Write_File: { path } ")
+    file = io.open(path, "wb")
+    file.write(data)
+    file.close()
 
 
-'''
+
+'''cls
+import io
+stream = io.open("sample.txt", "r")
+print stream.read()
+
+file = open("sample.bin", "wb")
+file.write(b"This binary string will be written to sample.bin")
+file.close()
+
+
+
 def Write_File(path, data):
     print(f" Write_File: { path } ")
     with open(path, 'wb') as f: # with is context manager, it closed the file in the end of the scope
