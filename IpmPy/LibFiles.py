@@ -1,6 +1,7 @@
+# LibFiles.py Updated: 21_09_01   20_06_12
 # numpy types
 # https://docs.scipy.org/doc/numpy/user/basics.types.html 
-# LibFiles.py Updated: 20_06_12
+
 
 import numpy
 import io
@@ -26,16 +27,21 @@ def Write_FileNpy(path, data):
     print(f" Write_File: { path } ")
     numpy.save(path, data)
 
-# *F* don't work
-def Write_File(path, data):
+# work ok
+def Write_File1(path, data):
     print(f" Write_File: { path } ")
     file = io.open(path, "wb")
     file.write(data)
     file.close()
 
 
+def Write_File(path, data):
+    print(f" Write_File: { path } ")
+    data.tofile(path)
 
-'''cls
+
+
+'''
 import io
 stream = io.open("sample.txt", "r")
 print stream.read()
@@ -44,6 +50,8 @@ file = open("sample.bin", "wb")
 file.write(b"This binary string will be written to sample.bin")
 file.close()
 
+a.tofile('test2.dat')
+a2 = np.fromfile('test2.dat', dtype=int)
 
 
 def Write_File(path, data):
@@ -54,7 +62,6 @@ def Write_File(path, data):
 
 
 Add functions:
-Write_File(path, data_type='<f4'):
 
 
 CopyFile(SrcPath, DstPath, SrcOffsetX=0, SrcOffsetY=0, DstOffsetX=0, DstOffsetY=0, Data_Type='<f4')) Not needed

@@ -1,7 +1,7 @@
-# cv_numpy.py Updated: 20_04_04
+# LibFiles_Tst.py  Updated: 21_09_01
 
 #import cv2 as cv
-import numpy as np
+import numpy
 #import statistics as st
 #import os
 import LibFiles as LibF
@@ -36,17 +36,43 @@ print(f"ImgF = { ImgF }\n")
 #LibD.ImgStat(ImgF)
 '''
 
-Data = np.arange(10)
-print(f"Data = {Data}")
+DataI = numpy.arange(10)
+#print(f"DataI = {DataI}")
     #   [ 0  1  2  3  4  5  6  7  8  9]
+
+Data = numpy.array([0,1,2,3,4,5,6,7,8,9], dtype=numpy.float32)
+print(f"Data = {Data}")
 
 FN3 = 'File.bin'
 PathTmp = PathM + FN3
-LibF.Write_File(PathTmp, Data)
+LibF.Write_File(PathTmp, Data) 
+#LibF.Write_File1(PathTmp, Data)
 
 DataR = LibF.Read_File(PathTmp)
 print(f"DataR = {DataR}")
-print(f"DataR[1] = {DataR[1]}")
+print(f"Compare = { DataR == Data }")
+
+
+
+Row = 3   
+Col = 4
+Data2d = numpy.array([ [0,1,2,3], [4,5,6,7], [8,9,10,11]], dtype=numpy.float)
+print(f"Data2d = { Data2d }")
+
+'''
+*F*
+FN2d = 'File2d.bin'
+PathTmp = PathM + FN3
+LibF.Write_File(PathTmp, Data2d) 
+#LibF.Write_File1(PathTmp, Data)
+
+DataR2d = LibF.Read_File(PathTmp)
+print(f"DataR2d = {DataR2d}")
+print(f"Compare = { DataR2d == Data2d }")
+'''
+
+
+
 
 
 
