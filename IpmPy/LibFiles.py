@@ -8,11 +8,14 @@ import io
 
 # Read raw data from a binary file
 def Read_File(path, data_type='<f4'):
-    print(f" Read_File: {path} ")
+    print(f" Read_File: path = { path } ")
     with open(path, 'rb') as f: # with is context manager, it closed the file in the end of the scope
         # dat = numpy.fromfile(f, '<f4') # little-endian float32
-        dat = numpy.fromfile(f, data_type) 
-    return dat
+        data = numpy.fromfile(f, data_type)
+
+    print(f" Read_File: data.shape = { data.shape } ")
+    print(f" Read_File: data.dtype = { data.dtype }\n")  
+    return data
 
 # Read raw data from a binary file
 def Read_File2(path):
@@ -36,7 +39,9 @@ def Write_File1(path, data):
 
 
 def Write_File(path, data):
-    print(f" Write_File: { path } ")
+    print(f" Write_File: path = { path } ")
+    print(f" Write_File: data.shape = { data.shape } ")
+    print(f" Write_File: data.dtype = { data.dtype }\n")  
     data.tofile(path)
 
 

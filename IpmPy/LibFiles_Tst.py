@@ -40,7 +40,8 @@ DataI = numpy.arange(10)
 #print(f"DataI = {DataI}")
     #   [ 0  1  2  3  4  5  6  7  8  9]
 
-Data = numpy.array([0,1,2,3,4,5,6,7,8,9], dtype=numpy.float32)
+#Data = numpy.array([0,1,2,3,4,5,6,7,8,9,10,11], dtype=numpy.float32)
+Data = numpy.arange(12, dtype=numpy.float32)
 print(f"Data = {Data}")
 
 FN3 = 'File.bin'
@@ -56,20 +57,21 @@ print(f"Compare = { DataR == Data }")
 
 Row = 3   
 Col = 4
-Data2d = numpy.array([ [0,1,2,3], [4,5,6,7], [8,9,10,11]], dtype=numpy.float)
+#Data2d = numpy.array([ [0,1,2,3], [4,5,6,7], [8,9,10,11]], dtype=numpy.float)
+Data2d = Data.reshape(Row, Col)
 print(f"Data2d = { Data2d }")
 
-'''
-*F*
-FN2d = 'File2d.bin'
-PathTmp = PathM + FN3
-LibF.Write_File(PathTmp, Data2d) 
-#LibF.Write_File1(PathTmp, Data)
 
-DataR2d = LibF.Read_File(PathTmp)
-print(f"DataR2d = {DataR2d}")
+FN2d = 'File2d.bin'
+PathTmp = PathM + FN2d
+LibF.Write_File(PathTmp, Data2d) 
+#LibF.Write_File1(PathTmp, Data2d)
+
+DataR1d = LibF.Read_File(PathTmp)
+print(f"DataR1d = { DataR1d }")
+DataR2d =  DataR1d.reshape(Row, Col)
+print(f"DataR2d = { DataR2d }")
 print(f"Compare = { DataR2d == Data2d }")
-'''
 
 
 

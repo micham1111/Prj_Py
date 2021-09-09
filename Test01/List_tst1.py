@@ -5,6 +5,8 @@ l = [1,2,3,4,5]
 print(l)
 print(l[2])
 
+
+
 planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
 print(f"len(planets) = {len(planets)}")
 print(f"planets = {planets}")
@@ -60,8 +62,6 @@ s = [9, 2, 3, 5, 7, 1, 6]
 ss = sorted(s)
 print(f"sorted(s) = {ss}")
 
-c = 12 + 3j
-print(f"c.imag = {c.imag}")
 
 x = 12
 print(f"x.bit_length = {x.bit_length()}")
