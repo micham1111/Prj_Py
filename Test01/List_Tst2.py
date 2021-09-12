@@ -1,5 +1,6 @@
 # List_Tst2.py  Last updated: 21_09_08  21_08_11
 
+
 #List
 l = [1,2,3,4,5]
 print(f"l={ l }")  
@@ -40,14 +41,19 @@ print(f"list2={ list2 }")  # list2=[2, 4, -0.1, [1, 'two', 2.7, 0], True]
 q1 = [x for x in range(1,7,2)]  
 print(f"q1={ q1 }\n")    # q1=[1, 3, 5]
 
-q2 = q1
+q2 = q1   # q1 and q2 refer to the same list, lists are mutable
 q1[2] = 'oops'
 print(f"q1={ q1 }")      # q1=[1, 3, 'oops']
 print(f"q2={ q2 }\n")    # q2=[1, 3, 'oops']
 
 q2[1] = 'oops2'
-print(f"q1={ q1 }")      # q1=[1, 3, 'oops']
-print(f"q2={ q2 }\n")    # q2=[1, 3, 'oops']
+print(f"q1={ q1 }")      # q1=[1, 'oops2', 'oops']
+print(f"q2={ q2 }\n")    # q2=[1, 'oops2', 'oops']
+
+q = [x for x in range(1,4)]  
+print(f"q={ q1 }\n")    # q1=[1, 3, 5]
+
+
 
 
 
