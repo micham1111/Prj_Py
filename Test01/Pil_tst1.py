@@ -20,6 +20,5 @@ img_gray = Image.open(path_img).convert('L')
 
 height = 50
 width = 50
-#img_resize = img.resize(height, width)
-img_resize = img.resize(150,150)
-img_resize.show()
+#img_resize = img.resize(height, width)   not work
+#img_resize.show()
