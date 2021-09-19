@@ -57,7 +57,27 @@ print(f"Is { c1 } a letter or number : {  b } ")  # Is z a letter or number : Tr
 
 # Returns True if characters are letters
 b = c1.isalpha()
-print(f"Is { c1 } a letter: {  b } ")  # 
+print(f"{ c1 } isalpha = {  b } ")  # z isalpha = True
+
+# Returns True if characters are numbers (Floats are False)
+c2 = "3"
+b = c2.isdigit()
+print(f" { c2 } isdigit = {  b } ")  #  3 isdigit = True
+
+
+# Returns True if all are lowercase
+b = c1.islower()
+print(f"{ c1 } islower = {  b } ")   # z islower = True
+
+# Returns True if all are uppercase
+b = c1.isupper()
+print(f"{ c1 } isupper = {  b } ")   # z isupper = False
+
+
+# Returns True if all are spaces
+a_space = "    "
+b = a_space.isspace()
+print(f"{ a_space } isspace = {  b } ")   # 
 
 
 
