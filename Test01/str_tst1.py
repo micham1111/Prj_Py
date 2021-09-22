@@ -23,23 +23,39 @@ print(r'C:\some\name')  # note the r before the quote
 # 0   1   2   3   4   5   6   Index
 #-6  -5  -4  -3  -2  -1
 word = 'Python'
+l = len(word)
+print(f" len({ word }) = { l } ")
 print(word[0])  # character in position 0
 
-print(word[0:2])  # characters from position 0 (included) to 2 (excluded)
-print(word[2:])
+sub = word[0:2]   # characters from position 0 (included) to 2 (excluded)
+print(f" word[0:2] = { sub }")
+
+sub = word[2:]   # 
+print(f" word[2:] = { sub }")
+
 print(word[-1])  # last character
 
 print(word[-2])  # second-last character
         # 'o'
 print(word[-6])
          #'P'
-print(word[0:-1:2])
-print(word[::-1])
+         
+sub = word[0:-1:2]   # 
+print(f" word[0:-1:2] = { sub }")
+
+sub = word[::-1]   # 
+print(f" word[::-1] = { sub }")
+
+
+sub = word[:2]   # 
+print(f" word[:2] = { sub }")
+
+sub = word[-2:]    # characters from the second-last (included) to the end
+                   # 'on'
+print(f" word[-2:] = { sub }")
 
 print(word[:2] + word[2:])
-print(word[-2:])  # characters from the second-last (included) to the end
-        # 'on'
-print(len(word))
+
 
 s = 'steganograpHy is the practicE of conceaLing a file, message, image, or video within another fiLe, message, image, Or video.'
 msg = ''

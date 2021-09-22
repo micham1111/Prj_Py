@@ -73,11 +73,12 @@ print(f"{ c1 } islower = {  b } ")   # z islower = True
 b = c1.isupper()
 print(f"{ c1 } isupper = {  b } ")   # z isupper = False
 
-
 # Returns True if all are spaces
 a_space = "    "
 b = a_space.isspace()
-print(f"{ a_space } isspace = {  b } ")   # 
+print(f"{ a_space } isspace = {  b } ")   #     isspace = True
+
+
 
 
 
