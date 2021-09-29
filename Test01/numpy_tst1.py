@@ -84,4 +84,8 @@ print(f" z = { z } \n")
 A = np.arange(6).reshape(2,3)
 print(f" A = { A } \n")
 B = np.arange(6,18,2).reshape(2,3)
-print(f" B = { B } \n")
+print(f" B=np.arange(6,18,2).reshape(2,3)= { B } \n")  # B = [[ 6  8 10]
+                                                       #      [12 14 16]]
+
+                                                       
+

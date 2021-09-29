@@ -13,6 +13,15 @@ def is_float(str_val):
     except ValueError:
         return False
 
+# We can receive an unknown number of arguments using the splat (*) operator
+def sumAll(*args):
+    sum = 0
+    for i in args:
+        sum += i
+    return sum
+
+
+#=================================================================================
 
 
 s = "3.1"
@@ -22,6 +31,11 @@ print(f" is_float({ s }) = { b }")
 f = 3.14
 b = is_float(f)
 print(f" is_float({ f }) = { b }")
+
+
+t = sumAll(1,2,3,4)
+print(f" sumAll(1,2,3,4) = { t }")    # sumAll(1,2,3,4) = 10 
+
 
 
 

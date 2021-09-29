@@ -1,4 +1,4 @@
-# List_Tst2.py  Last updated: 21_09_08  21_08_11
+# List_Tst2.py  Last updated: 21_09_27  21_09_08  21_08_11
 
 
 #List
@@ -50,13 +50,30 @@ q2[1] = 'oops2'
 print(f"q1={ q1 }")      # q1=[1, 'oops2', 'oops']
 print(f"q2={ q2 }\n")    # q2=[1, 'oops2', 'oops']
 
-q = [x for x in range(1,4)]  
-print(f"q={ q1 }\n")    # q1=[1, 3, 5]
+q = [x for x in range(1,5)]  
+print(f"q={ q }\n")    # q=[1, 2, 3, 4]
 
+# Insert value at index insert(index, value)
+q.insert(2, 6)
+print(f"q.insert(2, 6)={ q }\n")    # q.insert(2, 6)=[1, 2, 6, 3, 4]
 
+# Delete first occurrence of value
+q.remove(3)
+print(f"q.remove(3)={ q }\n")    # q.remove(3)=[1, 2, 6, 4]
 
+# Remove item at index
+q.pop(2)
+print(f"q.pop(2) = { q }\n")    # q.pop(2)=[1, 2, 4]
 
+# Create the multidimensional list 3 x 14
+mult_table = [[0] * 4 for i in range(3)]
+print(f"mult_table = { mult_table }\n")    # mult_table = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 
+# This will increment for each row
+for i in range(0, 3):
+    # This will increment for each item in the row
+    for j in range(0, 4):
+        # Assign the value to the cell
+        mult_table[i][j] = i * j
 
-
-
+print(f"mult_table = { mult_table }\n")
