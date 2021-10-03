@@ -11,7 +11,7 @@ print(os_version)
    # WINDOWS_NT
 
 s = os.getcwd()
-print(f"os.getcwd = { s }\n")
+print(f"os.getcwd = { s }\n")   # Display current directory
      # os.getcwd = M:\Prj_Py\Test01
 
 # os.chdir('/server/accesslogs') # Change current working directory
