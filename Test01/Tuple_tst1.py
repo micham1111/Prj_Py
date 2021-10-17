@@ -35,22 +35,21 @@ print(f"a + st = { a_st}")    # a + st = (5, 6, 1, 2, 3)
 # Convert a List into a Tuple
 a_list = [55, 89, 144]
 a_tuple = tuple(a_list)
-print(f"a_tuple = { a_tuple }")
+print(f"a_tuple = { a_tuple }")   # a_tuple = (55, 89, 144)
 
 # Get max and minimum value
 mi = min(a_tuple)
-print(f" min(a_tuple) = { mi } ")
+print(f" min(a_tuple) = { mi } ")   # min(a_tuple) = 55
 ma = max(a_tuple)
-print(f" max(a_tuple) = { ma } ")
+print(f" max(a_tuple) = { ma } ")   #  max(a_tuple) = 144
 
 
 # Convert a Tuple into a List
 a_list2 = list(a_tuple)
-print(f"a_list2 = { a_list2 }")
+print(f"a_list2 = { a_list2 }")    # a_list2 = [55, 89, 144]
 
 
-
-
+#============================================
 
 x = 0.125
 numerator, denominator = x.as_integer_ratio()

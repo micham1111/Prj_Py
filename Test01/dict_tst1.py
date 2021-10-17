@@ -1,7 +1,7 @@
 # dict_tst1.py    21_09_28  20_03_29
 
 #dictionary
-numbers = {'one':1, 'two':2, 'three':3}
+numbers = { 'one':1, 'two':2, 'three':3 }
 # Dictionaries may not print out in the order created since they are unordered
 print(f"numbers = { numbers }")   # numbers = {'one': 1, 'two': 2, 'three': 3}
 print(f"numbers['two'] = { numbers['two'] } ")  # numbers['two'] = 2
@@ -74,5 +74,17 @@ print(f"points = {points}")   # points = [{'x': 2, 'y': 3}, {'x': 4, 'y': 1}]
 
 points.sort(key=lambda i: i['y'])
 print(f"points(sorted) = {points}")  # points(sorted) = [{'x': 4, 'y': 1}, {'x': 2, 'y': 3}]
+
+#=====================================================================
+# https://www.youtube.com/watch?v=Q1uKHJXeB_Y
+data = {
+        'username: 'James',
+        'active': True,
+        'subscribers': 10
+        'order_total' : 39.99,
+        'order_ids': ['abc0', 'qqq1', 'LLL2'],
+}
+
+#=====================================================================
 
 
