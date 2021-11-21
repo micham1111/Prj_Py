@@ -16,6 +16,7 @@ print(f"l.reverse() = {l} ")  # l.reverse() = [5, 4, 3, 2, 1]
 
 # Create a list with range
 list0_4 = list(range(5))
+list1_4 = list(range(1,5))     # list1_4 = [1, 2, 3, 4]
 print(f"list0_4 = {list0_4}")  # list0_4 = [0, 1, 2, 3, 4]
 
 list2 = ["string", 1.234, 3]

@@ -3,7 +3,7 @@
 
 import numpy
 
-# Copy num
+# Create a new  image
 def CopyRoi(Data, RoiX, RoiY, RoiW, RoiH, OffsetX_Dst = 0, OffsetY_Dst=0, dtype=numpy.float32, FillValue = 0):    
     OutH = OffsetY_Dst + RoiH
     OutW = OffsetX_Dst + RoiW
