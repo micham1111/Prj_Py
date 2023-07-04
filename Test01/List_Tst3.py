@@ -54,3 +54,12 @@ print(f"list8 = { list8 } ")   # list8 = [0, 64, 256, 576, 1024, 1600, 2304]
 list2d_0 = [x * y for x in range(1, 3) for y in range(11, 16)]
 print(f"list2d_0 = { list2d_0 } ")   # 
 
+
+fruits = ['apple', 'banana', 'mango'] 
+for index, fruit in enumerate(fruits): 
+    print(index, fruit)
+#0 apple
+#1 banana
+#2 mango
+
+
